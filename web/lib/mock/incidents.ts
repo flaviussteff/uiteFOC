@@ -101,10 +101,15 @@ export const MOCK_ENVIRONMENT: EnvironmentSnapshot = {
     trend: "rising",
   },
   temperature: { airC: 29.4, dewPointC: 8.1, humidityPct: 24 },
-  precipitation: { last24hMm: 0, last7dMm: 1.2, daysSinceRain: 11 },
+  precipitation: {
+    last24hMm: 0,
+    last7dMm: 1.2,
+    daysSinceRain: 11,
+    dailyMm: [0, 0, 0, 1.2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
   airQuality: {
     aqi: 128,
-    scale: "eaqi",
+    scale: "us-epa",
     category: "unhealthy_sensitive",
     dominant: "pm25",
     pm25: 41.2,

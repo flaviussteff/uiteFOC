@@ -27,7 +27,7 @@ export function AlertsContainer({
   const hidden = live.length - visible.length;
 
   return (
-    <section aria-label="Alerte de proximitate" className="flex flex-col gap-8">
+    <section aria-label="Alerte de proximitate" className="flex flex-col gap-6">
       {visible.map((alert) => (
         <AlertBanner
           key={alert.alertId}
@@ -41,9 +41,9 @@ export function AlertsContainer({
         <button
           type="button"
           onClick={() => setExpanded(true)}
-          className="rounded-xl bg-paper-white px-16 py-12 text-left text-[13px] font-medium text-slate shadow-subtle-2 hover:bg-fog-gray"
+          className="border border-rule bg-paper-white px-8 py-6 text-left font-mono text-[10px] uppercase tracking-[0.08em] text-slate hover:bg-parchment"
         >
-          încă {hidden} {hidden === 1 ? "incendiu" : "incendii"} în zona ta
+          + {hidden} {hidden === 1 ? "incendiu" : "incendii"} în raza setată
         </button>
       )}
     </section>

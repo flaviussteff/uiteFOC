@@ -146,7 +146,12 @@ replaces by `id` and never has to reconcile a partial.
     "trend": "rising"           // rising | steady | falling | null
   },
   "temperature": { "airC": 29.4, "dewPointC": 8.1, "humidityPct": 24 },
-  "precipitation": { "last24hMm": 0.0, "last7dMm": 1.2, "daysSinceRain": 11 },
+  "precipitation": {
+    "last24hMm": 0.0,
+    "last7dMm": 1.2,
+    "daysSinceRain": 11,
+    "dailyMm": [0,0,1.2,0,0,0,0,0,0,0,0,0,0,0]   // oldest first, 14 days, null if unavailable
+  },
   "airQuality": {
     "aqi": 128,
     "scale": "eaqi",            // eaqi | us-epa

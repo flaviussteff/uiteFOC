@@ -147,7 +147,13 @@ export interface EnvironmentSnapshot {
   provider: string;
   wind: WindObservation;
   temperature: { airC: number; dewPointC: number | null; humidityPct: number };
-  precipitation: { last24hMm: number; last7dMm: number; daysSinceRain: number };
+  precipitation: {
+    last24hMm: number;
+    last7dMm: number;
+    daysSinceRain: number;
+    /** Oldest first, one entry per day, 14 expected. null when unavailable. */
+    dailyMm: number[] | null;
+  };
   airQuality: AirQuality | null;
 }
 
