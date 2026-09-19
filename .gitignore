@@ -42,3 +42,6 @@ venv/
 data/raw/
 data/interim/
 runs/
+
+# typescript incremental build cache
+*.tsbuildinfo
